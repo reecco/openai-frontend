@@ -1,0 +1,155 @@
+@import './assets/scss/global.scss';
+@import './assets/scss/mixins';
+
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+#App--dark {
+  background-color: $bg-color-main-dark;
+  color: $color-text-dark;
+}
+
+#App--light {
+  background-color: $bg-color-main-light;
+  color: $color-text-light;
+}
+
+.App h1 {
+  padding-top: 2%;
+  text-align: center;
+  @include h1($h1-size, $h1-weight);
+}
+
+.container-forms {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .textarea-text, .result .textarea-result {
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+  height: 70%;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  resize: none;
+  border: none;
+  transition: .5s;
+  outline: none;
+}
+
+.form .text--warning {
+  padding: 15px;
+  border-radius: 10px;
+  width: 500px;
+  height: 70%;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  resize: none;
+  background-color: #fff2f2;
+  box-shadow: 2px 2px 3px 1px #dc3545;
+  transition: none;
+  outline: none;
+  border: 2px solid #dc3545;
+}
+
+.form .text--warning::placeholder {
+  color: #dc3545;
+}
+
+#textarea--dark {
+  color: $color-text-dark;
+  box-shadow: 2px 2px 3px 1px #202123;
+  background-color: $input-bg-color-dark;
+}
+
+#textarea--dark::placeholder {
+  color: $color-text-dark;
+}
+
+.result .textresult-dark {
+  color: $color-text-dark;
+  box-shadow: 2px 2px 3px 1px #202123;
+  background-color: $input-bg-color-dark;
+}
+
+.result .textresult-light {
+  box-shadow: 2px 2px 3px 1px rgb(204, 199, 199);
+  background-color: $input-bg-color-light;
+}
+
+#textarea--light {
+  box-shadow: 2px 2px 3px 1px rgb(204, 199, 199);
+  background-color: $input-bg-color-light;
+}
+
+.form #textarea--light:focus {
+  box-shadow: 2px 2px 3px 3px rgb(167, 162, 162);
+}
+
+.form #textarea--dark:focus {
+  box-shadow: 2px 2px 3px 3px #202123;
+}
+
+.form .btn-search, .result .btn-copy {
+  margin: 0 auto;
+  width: 40%;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fefefe;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.form .btn-search:hover {
+  background-color: #0369d5;
+}
+
+.warnings {
+  width: 10%;
+  margin-top: 5%;
+}
+
+.warnings h3 {
+  margin-bottom: 10%;
+  @include h3($h3-size, $h3-weight);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+}
+
+.result .textarea-result {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.result .textarea-result::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+.result .textarea-result::-webkit-scrollbar-thumb {
+  background-color: #202123;
+  border-radius: 10px;
+}
+
+.result .btn-copy {
+  background-color: #17a2b8;
+}
+
+.result .btn-copy:hover {
+  background-color: #188fa1;
+}

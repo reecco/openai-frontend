@@ -1,0 +1,76 @@
+@import '../../assets/scss/main';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#navbar--light {
+  color: $color-text-light;
+  background-color: $nav-bg-color-light;
+}
+
+#navbar--dark {
+  background-color: $nav-bg-color-dark;
+}
+
+#navbar--dark .navbar-list li a {
+  color: $color-text-dark;
+}
+
+#navbar--light .navbar-list li a {
+  color: $color-text-light;
+}
+
+.navbar .navbar-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-list li {
+  margin: 10px;
+  list-style: none;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-list li a:hover {
+  opacity: .9;
+}
+
+.navbar-list li:last-child {
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+
+.navbar .btn-theme {
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.navbar .btn-theme:hover {
+  scale: 1.1;
+}
+
+.navbar .btn-theme:active {
+  scale: 1;
+}
+
+.navbar #btn--dark {
+  color: $color-text-dark;
+}
+
+.navbar #btn--light {
+  color: $color-text-light;
+}

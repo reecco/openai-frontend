@@ -1,0 +1,121 @@
+@import '../../assets/scss/global.scss';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/main';
+
+.container-token {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container--dark {
+  background-color: $bg-color-main-dark;
+  color: $color-text-dark;
+}
+
+#container--light {
+  background-color: $bg-color-main-light;
+  color: $color-text-light;
+}
+
+.container-token h1 {
+  padding-top: 2%;
+  @include h1($h1-size, $h1-weight);
+}
+
+.form-token {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-token .message {
+  margin: 10px 10px 10px 0;
+}
+
+.form-token #success {
+  color: #28a745;
+}
+
+.form-token #error {
+  color: #dc3545;
+}
+
+.form-token .box-input {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.form-token .box-input .input-token {
+  padding: 20px 15px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  background-color: #fff2f2;
+  border: none;
+  transition: .5s;
+  outline: none;
+}
+
+.form-token .box-input #input--dark {
+  background-color: $input-bg-color-dark;
+  box-shadow: 2px 2px 3px 1px #202123;
+  color: $color-text-dark;
+}
+
+.form-token .box-input #input--light {
+  background-color: $input-bg-color-light;
+  box-shadow: 2px 2px 3px 1px rgb(204, 199, 199);
+}
+
+.form-token .box-input #input--light:focus {
+  box-shadow: 2px 2px 3px 2px rgb(167, 162, 162);
+}
+
+.form-token .box-input #input--dark:focus {
+  box-shadow: 2px 2px 3px 3px #202123;
+}
+
+.form-token .box-input .btn-eye {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transform: .5s;
+}
+
+.form-token .box-input .btn-eye:hover {
+  scale: 1.05;
+}
+
+.form-token .box-input .btn-eye:active {
+  scale: 1;
+}
+
+.form-token .btn-set {
+  width: 120px;
+  height: 35px;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+  padding: 7px 5px;
+  border-radius: 10px;
+  background-color: #28a745;
+  color: #fefefe;
+  font-size: 1rem;
+  transition: .3s;
+}
+
+.form-token .btn-set:hover {
+  background-color: #208037;
+}
+
+.form-token .btn-set:active {
+  background-color: #28a745;
+}

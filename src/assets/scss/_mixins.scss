@@ -1,0 +1,9 @@
+@mixin h1($h1-size, $h1-weight) {
+  font-size: $h1-size;
+  font-weight: $h1-weight;
+}
+
+@mixin h3($h3-size, $h3-weight) {
+  font-size: $h3-size;
+  font-weight: $h3-weight;
+}
